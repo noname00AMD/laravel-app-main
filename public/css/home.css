@@ -1,0 +1,50 @@
+.home_body .title, .home_body .title4, .home_body .title3, .home_body .title2, .home_body .title1 {
+  color: #000;
+  line-height: 2.8rem;
+  letter-spacing: 1.5px;
+  font-size: 28px;
+  font-weight: 650;
+  display: inline-block;
+}
+.home_body .title:first-letter, .home_body .title4:first-letter, .home_body .title3:first-letter, .home_body .title2:first-letter, .home_body .title1:first-letter {
+  text-transform: uppercase;
+}
+.home_body .title1 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 2rem;
+  letter-spacing: 0.5px;
+}
+.home_body .title2 {
+  letter-spacing: 0.5px;
+  line-height: 1.6rem;
+  font-size: 19px;
+  font-weight: 550;
+}
+.home_body .title3 {
+  letter-spacing: 0.5px;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+.home_body .title4 {
+  letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 1.4rem;
+  font-weight: 400;
+}
+.home_body .special {
+  background: linear-gradient(200deg, #ebebeb 0%, transparent 100%), linear-gradient(#ebebeb 0%, #fff 100%);
+}
+.home_body .text_decor {
+  color: red;
+  border-bottom: 2px solid #c90000;
+}
+.home_body .text {
+  font-size: 12px;
+}
+.home_body .border {
+  overflow: hidden;
+  border-radius: 4px;
+}
+/*# sourceMappingURL=home.css.map */

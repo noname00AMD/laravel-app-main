@@ -1,0 +1,141 @@
+.newarticle .time, .newarticle .date {
+  display: "block";
+  padding: "5px";
+  font-size: "25px";
+}
+.newarticle .langlabel {
+  display: block;
+}
+.newarticle .categorylabel {
+  margin: "5px";
+  display: "block";
+}
+.newarticle .slugGenerate {
+  position: "absolute";
+  cursor: "pointer";
+  right: "8px";
+  top: "8px";
+}
+.newarticle .taglabel {
+  display: "block";
+  margin: "5px";
+}
+.newarticle .taginput {
+  outline: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+.newarticle .statuslabel {
+  margin: "5px";
+}
+.newarticle .tagbox {
+  font-size: "1.8rem";
+}
+.newarticle .ltr {
+  text-align: left;
+}
+.newarticle .rtl {
+  text-align: right;
+}
+.newarticle .editor-placeholder {
+  color: #999;
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  user-select: none;
+  pointer-events: none;
+}
+.newarticle .editor-paragraph {
+  margin: 0 0 15px 0;
+  position: relative;
+}
+.newarticle label[aria-required=true]:after {
+  color: #e32;
+  content: " *";
+  display: inline;
+}
+.newarticle label {
+  font-size: 1.8rem;
+}
+.newarticle .title {
+  border: 1px black solid;
+  width: 100%;
+  font-size: 32px;
+  padding: 10px;
+}
+.newarticle .slug {
+  position: relative;
+  margin: 10px 0;
+  height: 30px;
+}
+.newarticle .slug .slug1 {
+  position: absolute;
+  border: 1px black solid;
+  width: 100%;
+  font-size: 2.2rem;
+  padding: 2px;
+}
+.newarticle .description {
+  border: 1px black solid;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 2.2rem;
+}
+.newarticle .excerpt {
+  border: 1px black solid;
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+}
+.newarticle .dropbox {
+  padding: 15px 5px;
+  border: 1px solid #000;
+  margin-bottom: 10px;
+}
+.newarticle .dropbox p {
+  text-align: center;
+}
+.newarticle .thumbType {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+}
+.newarticle .lang {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  display: block;
+}
+.newarticle .category {
+  width: 200px;
+  padding: 5px;
+  display: block;
+  margin: 5px;
+  border: 1px solid black;
+}
+.newarticle .tagInput {
+  outline: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+}
+.newarticle .add_tag_button {
+  padding: 5px;
+  margin: 5px;
+}
+.newarticle .status {
+  font-size: 1.6rem;
+  outline: 1px solid #000;
+}
+.newarticle .done {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  margin: 15px 0;
+  outline: 3px solid green;
+}
+/*# sourceMappingURL=NewArticle.css.map */

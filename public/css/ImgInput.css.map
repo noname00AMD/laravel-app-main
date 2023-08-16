@@ -1,0 +1,1 @@
+{"version":3,"sources":["ImgInput.sass"],"names":[],"mappings":"AACA;EACI;EACA;EACA;;AACA;EACI","file":"ImgInput.css","sourcesContent":["\r\n.dropbox\r\n    padding: 15px 5px\r\n    border: 1px solid #000\r\n    margin-bottom: 10px\r\n    p\r\n        text-align: center\r\n"]}
