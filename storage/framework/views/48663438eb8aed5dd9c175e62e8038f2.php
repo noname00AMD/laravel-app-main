@@ -1,12 +1,9 @@
-@extends('layout.HomeLayout')
-@section('content')
-{{--
-<link rel="stylesheet" href="/css/homebody.css"> --}}
+<?php $__env->startSection('content'); ?>
+
 <div class="home_body grid grid-cols-12 gap-4 ">
 
     <div class="col-start-1 col-span-12 bg-red-200">
-        {{--
-        <x-TopAds /> --}}
+        
         TOpads
     </div>
 
@@ -340,34 +337,7 @@
                 </div>
 
 
-                {{-- <div class='lagre' style=" margin-bottom: 36px">
-                    <div style=" vertical-align: top; display: inline-block; width: 36%">
-                        <a href="/" style="width: 100%;height: 100%">
-                            <img alt="a" class="border" style="width: 100%;height: 100%"
-                                src="/images/mark-zuckerberg-1644293841385-16442938420702071314982-0-191-750-1391-crop-16442943967191483993240.png" />
-
-                        </a>
-                    </div>
-                    <div style=" height: 100%; display: inline-block; width: 64%; padding: 0  0 0 8px">
-                        <a href="/" class="title3">
-                            hot girl tram anh noi nhu con lao !!!hot girl tram anh noi nhu con lao !!hot girl tram
-                            anh noi nhu con lao !!
-
-                        </a>
-                        <p style=" padding-top: 10px;margin-bottom: 5px">
-                            hot girl tr hot girl tram anh noi nhu con lao
-                            !!!hot girl tram a hot girl tram anh noi nhu con la
-                            hot girl traao !!!hot girl tram a hot girl tram anh noi nhu con
-                        </p>
-                        <div style=" text-align: right">
-                            <a href="/" class="title3">tin ICT
-                            </a>
-                            <span style=" margin-left: 20px">
-                                3 gio truoc
-                            </span>
-                        </div>
-                    </div>
-                </div> --}}
+                
                 <div class='lagre my-4 overflow-auto' style=" margin-bottom: 36px">
                     <div class="float-left w-4/12" style=" vertical-align: top;">
                         <a href="/" style="width: 100%;height: 100%">
@@ -811,4 +781,6 @@
         </div>
     </section>
 </div>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.HomeLayout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\Users\noname\Desktop\laravel-app-main\resources\views/home.blade.php ENDPATH**/ ?>

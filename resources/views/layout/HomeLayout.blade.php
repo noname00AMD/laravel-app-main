@@ -5,20 +5,22 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> {{ $title }}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/home.css">
-    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.5/redux.js"></script>
+ @livewireScripts
+
 </head>
 
 <body>
-    <x-Header :$time  />
+    {{-- <x-Header :$time  /> --}}
+    <livewire:header /> 
     @yield('content')
-
-    <x-Footer />
+    
+    <livewire:footer /> 
+    {{-- <x-Footer /> --}}
 </body>
 
 </html>

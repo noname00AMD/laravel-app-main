@@ -1,49 +1,4 @@
-{{-- 
-export default component$(() => {
-    var props = useContext(propsContext);
-    const time = useSignal((new Date()).toDateString());
-    var pin = useSignal(false)
-    let show = useSignal(false)
-    var topBarElm = useSignal();
-    // const headerElm = useSignal()
-    let show_all_btn = useSignal()
-    // let hide_all_btn = useSignal()
-    // let submenu = useSignal()
-    let willHide = useSignal(false)
-    useVisibleTask$(() => {
-        // console.log(pin.value);
-        const observer = new IntersectionObserver(
-            ([e]) => {
-                if (e.isIntersecting) {
-                    console.log("notpin");
-                    pin.value = false
-                } else {
-                    console.log("pin");
-                    pin.value = true
-                }
-            },
-            { threshold: [0] }
-        );
-        observer.observe(topBarElm.value)
 
-    })
-    let search = () => {
-        console.log("search");
-    }
-    let show_menu = $(() => {
-
-        if (show.value === true) {
-            willHide.value = show.value
-            setTimeout(() => {
-                willHide.value = !show.value
-                show.value = !show.value
-            }, 300);
-            return
-        }
-        show.value = !show.value
-    })
-    return (
-        <> --}}
 
 <div class="top_bar container mx-auto grid grid-cols-12 gap-4">
 
@@ -56,13 +11,13 @@ export default component$(() => {
                 </div>
             </div>
             <div class="col-span-2 ">
-                <time class="time" id="time">{{ $time }}</time>
+                <time class="time" id="time"><?php echo e($time); ?></time>
             </div>
             <div class="col-span-2 ">
                 <p class="lang">eng vi</p>
             </div>
             <div class="col-span-2 ">
-                <a href={{ '/' .env("ADMIN_PATH") }}>
+                <a href=<?php echo e('/' .env("ADMIN_PATH")); ?>>
                     Admin
                 </a>
                 <a href="/signup">signup</a>
@@ -95,15 +50,7 @@ export default component$(() => {
                             Home
                         </a>
                     </li>
-                    {{-- @foreach ($category as $categories)
-                        @if ($category . taxonomy === 'CATEGORY')
-                            <li key={category.term_taxonomy_id} class="category">
-                                <a href={category.slug}>
-                                    {category.name}
-                                </a>
-                            </li>
-                        @endif
-                    @endforeach --}}
+                    
 
                     <li class="show_all_btn" id="btn" >
                       
@@ -113,7 +60,7 @@ export default component$(() => {
         </div>
     </div>
 
-    {{-- <x-Submenu showing={show.value} hide={show_menu} categories={props.categories} willHide={willHide.value} /> --}}
+    
 </header>
 <style>
     .menu_btn {
@@ -155,3 +102,4 @@ function btn(){
 const root = ReactDOM.createRoot(domContainer);
 root.render(e(btn));
 </script>
+<?php /**PATH C:\Users\noname\Desktop\laravel-app-main\resources\views/components/Header.blade.php ENDPATH**/ ?>
