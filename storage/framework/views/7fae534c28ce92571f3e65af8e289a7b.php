@@ -1,4 +1,4 @@
-<div class="col-3">
+<div class=" col-start-1 col-span-3">
     <ul class="navigationBar">
         <li style="margin-bottom: 22px">
             <a href="/">
@@ -6,65 +6,65 @@
             </a>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" )); ?>>
                 Admin Dashboard
             </a>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/article' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/article'); ?>>
                 Articles
             </a>
             <ul>
                 <li>
-                    <a href={{ '/' . env("ADMIN_PATH", "admin") . '/article/add' }}>
+                    <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/article/add'); ?>>
                         New Article
                     </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/category' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/category'); ?>>
                 Category
             </a>
             <ul>
                 <li>
-                    <a href={{ '/' . env("ADMIN_PATH", "admin") . '/category/add' }}>
+                    <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/category/add'); ?>>
                         New Category
                     </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/user' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/user'); ?>>
                 User
             </a>
             <ul>
                 <li>
-                    <a href={{ '/' . env("ADMIN_PATH", "admin") . '/user/add' }}>
+                    <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/user/add'); ?>>
                         New User
                     </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/media' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/media'); ?>>
                 Media
             </a>
             <ul>
                 <li>
-                    <a href={{ '/' . env("ADMIN_PATH", "admin") . '/media/add' }}>
+                    <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/media/add'); ?>>
                         New Media
                     </a>
                 </li>
             </ul>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/tag' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/tag'); ?>>
                 Tag
             </a>
             <ul>
                 <li>
-                    <a href={{ '/' . env("ADMIN_PATH", "admin") . '/tag/add' }}>
+                    <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/tag/add'); ?>>
                         New Tag
                     </a>
 
@@ -72,9 +72,10 @@
             </ul>
         </li>
         <li>
-            <a href={{ '/' . env("ADMIN_PATH", "admin") . '/siteinfo' }}>
+            <a href=<?php echo e('/' . env("ADMIN_PATH", "admin" ) . '/siteinfo'); ?>>
                 Site info
             </a>
         </li>
     </ul>
 </div>
+<?php /**PATH C:\Users\noname\Desktop\laravel-app-main\resources\views/components/NavigationBar.blade.php ENDPATH**/ ?>

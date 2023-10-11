@@ -6,21 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title> {{ $title }}</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="//unpkg.com/alpinejs" defer></script>
 
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/home.css">
- @livewireScripts
 
 </head>
 
 <body>
-    {{-- <x-Header :$time  /> --}}
-    <livewire:header /> 
+
+    <x-Header :$time />
     @yield('content')
-    
-    <livewire:footer /> 
-    {{-- <x-Footer /> --}}
+    <x-Footer />
 </body>
 
 </html>

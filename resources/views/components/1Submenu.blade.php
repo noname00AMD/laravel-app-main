@@ -1,6 +1,3 @@
-<div>
-    {{-- Care about people's approval and you will be their prisoner. --}}
-</div>
 <div class="submenu hide" aria-hidden="true">
     <div>
         <div class="cont ">

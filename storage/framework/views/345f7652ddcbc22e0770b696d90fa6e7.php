@@ -1,12 +1,10 @@
 
-
-<div class="top_bar container mx-auto grid grid-cols-12 gap-4">
-
+    <div>
+        <div class="top_bar container mx-auto grid grid-cols-12 gap-4">
             <div class="col-start-1 col-span-2  logo ">
                 <div style="width: 168px">
                     <a href="/" title="home"
                         style="background-image: url('/images/logo.png'); background-repeat: no-repeat; background-size: 100% 100% ">
-
                     </a>
                 </div>
             </div>
@@ -37,69 +35,83 @@
                 <button type="submit" onClick={search}>Search</button>
             </div>
         </div>
-    </div>
+        <header class="header ">
+            <div class="nav">
+                <div class="cont ">
+                    <div class=" row">
+                        <ul class="col-12 ">
+                            <li class="home">
+                                <a href="/">
+                                    Home
+                                </a>
+                            </li>
+                            
 
-</div>
-<header class="header ">
-    <div class="nav">
-        <div class="cont ">
-            <div class=" row">
-                <ul class="col-12 ">
-                    <li class="home">
-                        <a href="/">
-                            Home
-                        </a>
-                    </li>
-                    
+                            <li class="show_all_btn" id="btn">
 
-                    <li class="show_all_btn" id="btn" >
-                      
-                    </li>
-                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-    
-</header>
-<style>
-    .menu_btn {
-        font-size: 20px;
+            <?php if (isset($component)) { $__componentOriginal71c6471fa76ce19017edc287b6f4508c = $component; } ?>
+<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.Submenu','data' => ['showing' => '{show.value}','hide' => '{show_menu}','categories' => '{props.categories}','willHide' => '{willHide.value}']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? (array) $attributes->getIterator() : [])); ?>
+<?php $component->withName('Submenu'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag && $constructor = (new ReflectionClass(Illuminate\View\AnonymousComponent::class))->getConstructor()): ?>
+<?php $attributes = $attributes->except(collect($constructor->getParameters())->map->getName()->all()); ?>
+<?php endif; ?>
+<?php $component->withAttributes(['showing' => '{show.value}','hide' => '{show_menu}','categories' => '{props.categories}','willHide' => '{willHide.value}']); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginal71c6471fa76ce19017edc287b6f4508c)): ?>
+<?php $component = $__componentOriginal71c6471fa76ce19017edc287b6f4508c; ?>
+<?php unset($__componentOriginal71c6471fa76ce19017edc287b6f4508c); ?>
+<?php endif; ?>
+
+            <style>
+                .menu_btn {
+                    font-size: 20px;
+                }
+            </style>
+            <script type="text/babel">
+                const e = React.createElement;
+    // class btn extends React.Component{
+    //     constructor(props) {
+    //     super(props);
+    //     this.state = {open: true};
+    //     this.handle= this.handle.bind(this)
+    //   }
+    //    handle (e){
+    //     //   e.innerHTML ='<i class="bi bi-list-nested"></i>'
+    //     this.setState({open: !this.state.open})
+    //     console.log("her");
+    //     }
+    //     render() {
+    //         return(<React.Fragment>
+    //         {this.state.open?
+    //         <button onClick={this.handle}> <i class="bi bi-list"></i></button> :
+    //         <button onClick={this.handle}> <i class="bi bi-list-nested"></i></button> }
+    //     </React.Fragment>        )     }
+    // }
+    function btn(){
+       var [open,setOpen] = React.useState(false)
+       var   handle= (e)=>{
+           setOpen(!open)
+       }
+       return(<React.Fragment>
+           {!open?
+           <button onClick={handle}> <i class="bi bi-list"></i></button> :
+           <button onClick={handle}> <i class="bi bi-list-nested"></i></button> }
+       </React.Fragment>        )  
     }
-</style>
-<script type="text/babel">
-    const e = React.createElement;
-// class btn extends React.Component{
-//     constructor(props) {
-//     super(props);
-//     this.state = {open: true};
-//     this.handle= this.handle.bind(this)
-//   }
-//    handle (e){
-//     //   e.innerHTML ='<i class="bi bi-list-nested"></i>'
-//     this.setState({open: !this.state.open})
-//     console.log("her");
-//     }
-//     render() {
-//         return(<React.Fragment>
-//         {this.state.open?
-//         <button onClick={this.handle}> <i class="bi bi-list"></i></button> :
-//         <button onClick={this.handle}> <i class="bi bi-list-nested"></i></button> }
-//     </React.Fragment>        )     }
-// }
-function btn(){
-   var [open,setOpen] = React.useState(false)
-   var   handle= (e)=>{
-       setOpen(!open)
-   }
-   return(<React.Fragment>
-       {!open?
-       <button onClick={handle}> <i class="bi bi-list"></i></button> :
-       <button onClick={handle}> <i class="bi bi-list-nested"></i></button> }
-   </React.Fragment>        )  
-}
-   const domContainer = document.querySelector('#btn');
-const root = ReactDOM.createRoot(domContainer);
-root.render(e(btn));
-</script>
+       const domContainer = document.querySelector('#btn');
+    const root = ReactDOM.createRoot(domContainer);
+    root.render(e(btn));
+    </script>
+
+        </header>
+    </div>
 <?php /**PATH C:\Users\noname\Desktop\laravel-app-main\resources\views/components/Header.blade.php ENDPATH**/ ?>

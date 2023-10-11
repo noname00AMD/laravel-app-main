@@ -1,8 +1,6 @@
 @extends('layout.AdminLayout')
 @section('content')
 
-
-<h1>dashboard</h1>
-
+<h1>add artivle</h1>
 
 @endsection

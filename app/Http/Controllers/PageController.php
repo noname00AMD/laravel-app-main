@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Models\SiteInfo;
 use Illuminate\View\View;
 use Illuminate\Routing\Controller as BaseController;
@@ -25,6 +26,19 @@ class PageController extends BaseController
             'title' => "aaa",
             "time" => "time"
 
+        ]);
+    }
+    public function  test()
+    {
+        return view('test', [
+            'title' => "aaa",
+            "time" => "time"
+        ]);
+    }
+    public function  name(Request $request)
+    {
+        return view('htmx.test', [
+            'name' => $request->name
         ]);
     }
 }

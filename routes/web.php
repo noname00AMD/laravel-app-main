@@ -15,33 +15,40 @@ use App\Http\Controllers;
 
 Route::get('/', [Controllers\PageController::class, "home"]);
 Route::get('/about', [Controllers\PageController::class, "about"]);
+Route::get('/test', [Controllers\PageController::class, "test"]);
+Route::post('/name', [Controllers\PageController::class, "name"]);
+
+// HTMX  ----------------------------------------------------------------
+
+Route::post('/htmx/admin_dashboard', [Controllers\HtmxController::class, "admin_dashboard"]);
+
 
 // ----------------------------------------------------------------
 Route::get('/' . env("ADMIN_PATH", "admin"), [Controllers\AdminController::class, "show_dashboard"]);
-Route::get('/' . env("ADMIN_PATH", "admin").'/article', [Controllers\AdminController::class, "show_article"]);
-Route::get('/' . env("ADMIN_PATH", "admin").'/article/add', [Controllers\AdminController::class, "add_article"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/article', [Controllers\AdminController::class, "show_article"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/article/add', [Controllers\AdminController::class, "add_article"]);
 // ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin").'/category', [Controllers\AdminController::class, "show_category"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/category', [Controllers\AdminController::class, "show_category"]);
 
-Route::get('/' . env("ADMIN_PATH", "admin").'/category/add', [Controllers\AdminController::class, "add_category"]);
-
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin").'/user', [Controllers\AdminController::class, "show_user"]);
-
-Route::get('/' . env("ADMIN_PATH", "admin").'/user/add', [Controllers\AdminController::class, "add_user"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/category/add', [Controllers\AdminController::class, "add_category"]);
 
 // ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin").'/media', [Controllers\AdminController::class, "show_media"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/user', [Controllers\AdminController::class, "show_user"]);
 
-Route::get('/' . env("ADMIN_PATH", "admin").'/media/add', [Controllers\AdminController::class, "add_media"]);
-
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin").'/tag', [Controllers\AdminController::class, "show_tag"]);
-
-Route::get('/' . env("ADMIN_PATH", "admin").'/tag/add', [Controllers\AdminController::class, "add_tag"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/user/add', [Controllers\AdminController::class, "add_user"]);
 
 // ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin").'/siteinfo', [Controllers\AdminController::class, "site_info"]);
+Route::get('/' . env("ADMIN_PATH", "admin") . '/media', [Controllers\AdminController::class, "show_media"]);
+
+Route::get('/' . env("ADMIN_PATH", "admin") . '/media/add', [Controllers\AdminController::class, "add_media"]);
+
+// ----------------------------------------------------------------
+Route::get('/' . env("ADMIN_PATH", "admin") . '/tag', [Controllers\AdminController::class, "show_tag"]);
+
+Route::get('/' . env("ADMIN_PATH", "admin") . '/tag/add', [Controllers\AdminController::class, "add_tag"]);
+
+// ----------------------------------------------------------------
+Route::get('/' . env("ADMIN_PATH", "admin") . '/siteinfo', [Controllers\AdminController::class, "site_info"]);
 
 // ----------------------------------------------------------------
 // Route::get('/' . env("ADMIN_PATH", "admin").'/siteinfo', function () {
