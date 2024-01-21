@@ -2,6 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\View;
+use App\Http\Middleware;
+use App\Livewire;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,42 +18,64 @@ use App\Http\Controllers;
 |
 */
 
-Route::get('/', [Controllers\PageController::class, "home"]);
+Route::middleware([])->get('/', [Controllers\PageController::class, "home"]);
 Route::get('/about', [Controllers\PageController::class, "about"]);
+Route::get('/contact', [Controllers\PageController::class, "about"]);
+
+Route::get('/category', [Controllers\PageController::class, "category"]);
+Route::get('/report', [Controllers\PageController::class, "about"]);
+Route::get('/rss', [Controllers\PageController::class, "about"]);
+Route::get('/sign-in', [Controllers\PageController::class, "about"]);
+Route::get('/sign-up', [Controllers\PageController::class, "about"]);
+Route::get('/privacy-policy', [Controllers\PageController::class, "about"]);
+Route::get('/brand-and-trademark', [Controllers\PageController::class, "test"]);
+Route::get('/terms-and-conditions', [Controllers\PageController::class, "test"]);
+Route::get('/tuyen-dung', [Controllers\PageController::class, "test"]);
+Route::get('/tag', [Controllers\PageController::class, "test"]);
+
+
 Route::get('/test', [Controllers\PageController::class, "test"]);
 Route::post('/name', [Controllers\PageController::class, "name"]);
 
+Route::get('/counter', Livewire\Counter::class);
+
+
 // HTMX  ----------------------------------------------------------------
 
-Route::post('/htmx/admin_dashboard', [Controllers\HtmxController::class, "admin_dashboard"]);
 
 
 // ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin"), [Controllers\AdminController::class, "show_dashboard"]);
-Route::get('/' . env("ADMIN_PATH", "admin") . '/article', [Controllers\AdminController::class, "show_article"]);
-Route::get('/' . env("ADMIN_PATH", "admin") . '/article/add', [Controllers\AdminController::class, "add_article"]);
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin") . '/category', [Controllers\AdminController::class, "show_category"]);
 
-Route::get('/' . env("ADMIN_PATH", "admin") . '/category/add', [Controllers\AdminController::class, "add_category"]);
 
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin") . '/user', [Controllers\AdminController::class, "show_user"]);
-
-Route::get('/' . env("ADMIN_PATH", "admin") . '/user/add', [Controllers\AdminController::class, "add_user"]);
-
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin") . '/media', [Controllers\AdminController::class, "show_media"]);
-
-Route::get('/' . env("ADMIN_PATH", "admin") . '/media/add', [Controllers\AdminController::class, "add_media"]);
-
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin") . '/tag', [Controllers\AdminController::class, "show_tag"]);
-
-Route::get('/' . env("ADMIN_PATH", "admin") . '/tag/add', [Controllers\AdminController::class, "add_tag"]);
-
-// ----------------------------------------------------------------
-Route::get('/' . env("ADMIN_PATH", "admin") . '/siteinfo', [Controllers\AdminController::class, "site_info"]);
+    Route::get('/' . config("app.admin_path"), Livewire\AdminDashboard::class);
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/article', Livewire\AdminArticle::class);
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/article/add',Livewire\AdminAddArticle::class );
+    
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/question', Livewire\AdminQuestion::class);
+    // ----------------------------------------------------------------
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/category', Livewire\AdminCategory::class);
+    
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/category/add', Livewire\AdminAddCategory::class);
+    
+    // ----------------------------------------------------------------
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/order', Livewire\AdminOrder::class);
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/comment', Livewire\AdminComment::class);
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/user', Livewire\AdminUser::class);
+    
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/user/add',  Livewire\AdminAddUser::class);
+    
+    // ----------------------------------------------------------------
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/media',Livewire\AdminMedia::class);
+    
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/media/add', Livewire\AdminAddMedia::class);
+    
+    // ----------------------------------------------------------------
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/tag', Livewire\AdminTag::class);
+    
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/tag/add', Livewire\AdminAddTag::class);
+    
+    // ----------------------------------------------------------------
+    Route::get('/' . env("ADMIN_PATH", "admin") . '/siteinfo', Livewire\AdminSiteInfo::class);
 
 // ----------------------------------------------------------------
 // Route::get('/' . env("ADMIN_PATH", "admin").'/siteinfo', function () {

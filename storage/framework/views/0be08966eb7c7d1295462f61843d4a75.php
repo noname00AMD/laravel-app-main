@@ -1,1 +1,0 @@
-components.NavigationBar<?php /**PATH C:\Users\noname\Desktop\laravel-app-main\storage\framework\views/35b71cfb66109024c4535d9472a5bc41.blade.php ENDPATH**/ ?>

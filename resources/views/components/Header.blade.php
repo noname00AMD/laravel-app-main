@@ -60,7 +60,7 @@ return (
                 <p class="lang">eng vi</p>
             </div>
             <div class="col-span-2 ">
-                <a href={{ '/' .env("ADMIN_PATH") }}>
+                <a href={{ '/' .config("app.admin_path")}}>
                     Admin
                 </a>
                 <a href="/signup">signup</a>

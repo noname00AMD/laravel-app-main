@@ -1,6 +1,5 @@
 <div class="footer">
-
-    <div class="grid grid-cols-12 gap-4 mx-44">
+    <div class=" grid grid-cols-12 gap-4 mx-44">
         <div class="col-span-4 address">
             <div>
                 <p class="strong">trụ sở hà nội</p>
@@ -56,11 +55,19 @@
             <div class="logo">
                 <img style=" width: 100%; height: 100%" alt="adsad" src="/images/logo.png" />
             </div>
-            <p class="strong"> © Copyright 2007 - 2021 – CÔNG TY CỔ PHẦN VCCORP</p>
+            <p class="strong"> CÔNG TY CỔ PHẦN VCCORP</p>
             <p> Tầng 17, 19, 20, 21 Tòa nhà Center Building - Hapulico Complex, Số 1 Nguyễn Huy Tưởng, Thanh Xuân,
                 Hà Nội.</p>
             <p> Giấy phép số 2215/GP-TTĐT do Sở Thông tin và Truyền thông Hà Nội cấp ngày 10 tháng 4 năm 2019</p>
         </div>
     </div>
-
+    <div class="w-10/12 mx-auto">
+        <p class="inline text-left float-left">© 2007 - 2021 kenh14 alright service</p>
+        <div class="float-right">
+            <a class="mx-1" href="">twitter</a>
+            <a href="" class="mx-1">facebook</a>
+            <a href="" class="mx-1">instagram</a>
+            <a href="" class="mx-1">youtube</a>
+        </div>
+    </div>
 </div>

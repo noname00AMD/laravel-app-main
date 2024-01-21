@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\SiteInfo;
 use Illuminate\View\View;
 use Illuminate\Routing\Controller as BaseController;
+use App\Livewire;
 
 class AdminController extends BaseController
 {
@@ -36,6 +37,15 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
+    public function  show_question()
+    {
+        return view('admin.Question', [
+            'title' => "Adminartivle",
+            "time" => "time",
+            "adminpath" => "admin",
+            "questions" => []
+        ]);
+    }
     public function  show_category()
     {
         return view('admin.Category', [
@@ -57,7 +67,8 @@ class AdminController extends BaseController
         return view('admin.User', [
             'title' => "Adminartivle",
             "time" => "time",
-            "adminpath" => "admin"
+            "adminpath" => "admin",
+            "users" => []
         ]);
     }
     public function  add_user()
@@ -73,7 +84,9 @@ class AdminController extends BaseController
         return view('admin.Media', [
             'title' => "Adminartivle",
             "time" => "time",
-            "adminpath" => "admin"
+            "adminpath" => "admin",
+            "medias" => []
+
         ]);
     }
     public function  add_media()
@@ -89,7 +102,8 @@ class AdminController extends BaseController
         return view('admin.Tag', [
             'title' => "Adminartivle",
             "time" => "time",
-            "adminpath" => "admin"
+            "adminpath" => "admin",
+            "tags" => []
         ]);
     }
     public function  add_tag()

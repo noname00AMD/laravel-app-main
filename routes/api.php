@@ -17,3 +17,25 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get("/hottag", function (Request  $request) {
+
+    return array(
+        array(
+            "id" => 1,
+            "tag" => "hot girl",
+            "slug" => "hot-girl"
+        ),
+
+        array(
+            "id" => 2,
+            "tag" => "hot girl2",
+            "slug" => "hot-girl2"
+        ),
+
+        array(
+            "id" => 3,
+            "tag" => "hot girl3",
+            "slug" => "hot-girl3"
+        )
+    );
+});
