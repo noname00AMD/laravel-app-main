@@ -1,0 +1,29 @@
+.footer {
+  background-color: #333;
+}
+.footer .address {
+  padding-top: 20px;
+}
+.footer .address div {
+  margin: 10px 0;
+}
+.footer .contact {
+  padding-top: 20px;
+}
+.footer .contact div {
+  margin: 10px 0;
+}
+.footer .about {
+  color: #ddd;
+}
+.footer .about .logo {
+  padding: 30px 0 10px;
+}
+.footer .about p {
+  margin: 10px 5px 10px;
+}
+.footer .strong {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+/*# sourceMappingURL=Footer.module.css.map */

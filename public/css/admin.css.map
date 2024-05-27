@@ -1,0 +1,1 @@
+{"version":3,"sources":["admin.sass"],"names":[],"mappings":"AAAA;EACI;EACA;EACA;;AACA;EACI;;AACJ;EACI;EACA","file":"admin.css","sourcesContent":[".navigationBar >li\n    font-size: 1rem\n    font-weight: bold\n    margin: 10px 0\n    &>ul\n        margin-left: 10px\n    .active\n        background-color: white\n        color: red\n"]}

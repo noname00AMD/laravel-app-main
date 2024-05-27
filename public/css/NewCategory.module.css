@@ -1,0 +1,88 @@
+.newcategory label[aria-required=true]:after {
+  color: #e32;
+  content: " *";
+  display: inline;
+}
+.newcategory label {
+  font-size: 1.8rem;
+}
+.newcategory .title {
+  border: 1px black solid;
+  width: 100%;
+  font-size: 32px;
+  padding: 10px;
+}
+.newcategory .slug {
+  position: relative;
+  margin: 10px 0;
+  height: 30px;
+}
+.newcategory .slug .slug1 {
+  position: absolute;
+  border: 1px black solid;
+  width: 100%;
+  font-size: 2.2rem;
+  padding: 2px;
+}
+.newcategory .description {
+  border: 1px black solid;
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+  font-size: 2.2rem;
+}
+.newcategory .excerpt {
+  border: 1px black solid;
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  font-size: 2rem;
+}
+.newcategory .tts {
+  outline: 1px solid #000;
+  width: 100%;
+  min-height: 300px;
+  display: none;
+}
+.newcategory .thumbType {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+}
+.newcategory .lang {
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+  border: 1px solid black;
+  display: block;
+}
+.newcategory .category {
+  width: 200px;
+  padding: 5px;
+  display: block;
+  margin: 5px;
+  border: 1px solid black;
+}
+.newcategory .tagInput {
+  outline: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+}
+.newcategory .add_tag_button {
+  padding: 5px;
+  margin: 5px;
+}
+.newcategory .status {
+  font-size: 1.6rem;
+  outline: 1px solid #000;
+}
+.newcategory .done {
+  padding: 15px 20px;
+  cursor: pointer;
+  display: block;
+  font-size: 24px;
+  margin: 15px 0;
+  outline: 3px solid green;
+}
+/*# sourceMappingURL=NewCategory.module.css.map */

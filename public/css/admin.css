@@ -1,0 +1,13 @@
+.navigationBar > li {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.navigationBar > li > ul {
+  margin-left: 10px;
+}
+.navigationBar > li .active {
+  background-color: white;
+  color: red;
+}
+/*# sourceMappingURL=admin.css.map */
