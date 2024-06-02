@@ -3,9 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Database\Connection;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Database\Events\QueryExecuted;
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -14,6 +12,8 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Debugbar', \Barryvdh\Debugbar\Facades\Debugbar::class);
     }
 
     /**
@@ -21,9 +21,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        DB::whenQueryingForLongerThan(500, function (Connection $connection, QueryExecuted $event) {
-            // Notify development team...
-            var_dump("query qua lau", $event);
-        });
+        //
     }
 }

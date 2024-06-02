@@ -6,56 +6,53 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\SiteInfo;
 use Illuminate\View\View;
-use Illuminate\Routing\Controller as BaseController;
 use App\Models\Category;
-use Illuminate\Support\Facades\Log;
- 
-class PageController extends BaseController
+
+
+class PageController extends Controller
 {
     /**
      * Show the profile for a given user.
      */
-    // public function  home(Request $request,Response $response)
-    // {
-    //     // Log::info('Hi there!');
-    //     // $data = "home";
-    //     // $etag = md5(json_encode($data));
+    public function  home(Request $request,Response $response):View
+    {
+        // Log::info('Hi there!');
+        // $data = "home";
+        // $etag = md5(json_encode($data));
 
-    //     // // Check if the client's ETag matches the current ETag
-    //     // if ($request->header('If-None-Match') === $etag) {
-    //     //     // Return 304 Not Modified response
-    //     //     return $response(null, 304);
-    //     // }
+        // // Check if the client's ETag matches the current ETag
+        // if ($request->header('If-None-Match') === $etag) {
+        //     // Return 304 Not Modified response
+        //     return $response(null, 304);
+        // }
 
         
-    //     // $object="A";
-    //     // Debugbar::info($object);
-    //     return view('home', [
-    //         'title' => "aaa",
-    //         "time" => "time",
+        // $object="A";
+        // Debugbar::info($object);
+        return view('home', [
+            'title' => "aaa",
+            "time" => "time",
             
 
-    //     ]);
-    // }
-    // public function  about()
-    // {
-    //     return view('about', [
-    //         'title' => "aaa",
-    //         "time" => "time"
+        ]);
+    }
+    public function  about():View
+    {
+        return view('about', [
+            'title' => "aaa",
+            "time" => "time"
 
-    //     ]);
-    // }
-    // public function  category()
-    // {
-    //     return view('category', [
-    //         'title' => "aaa",
-    //         "time" => "time",
-    //         "categories"=>[]
+        ]);
+    }
+    public function  category():View
+    {
+        return view('category', [
+            'title' => "aaa",
+            "time" => "time",
+            "categories"=>[]
 
-    //     ]);
-    // }
-
-
+        ]);
+    }
 
 
 
@@ -74,14 +71,16 @@ class PageController extends BaseController
 
 
 
-    public function  test()
+
+
+    public function  test():View
     {
         return view('test', [
             'title' => "aaa",
             "time" => "time"
         ]);
     }
-    public function  name(Request $request)
+    public function  name(Request $request):View
     {
         return view('htmx.test', [
             'name' => $request->name

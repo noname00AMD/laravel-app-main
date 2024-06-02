@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    
+    protected $connection = 'mysql';
+ 
     public function up(): void
     {
         Schema::create('category', function (Blueprint $table) {
@@ -31,7 +32,7 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('category');
     }
    
 };

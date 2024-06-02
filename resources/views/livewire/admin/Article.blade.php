@@ -3,7 +3,7 @@
 @section("content") --}}
 <div class="col-span-9 col-start-4 ">
 
-    <h2>Articke list : </h2>
+    <h2 class="text-4xl">Articke list : </h2>
     <ul class=" article_list">
         @foreach ($article as $item)
         {

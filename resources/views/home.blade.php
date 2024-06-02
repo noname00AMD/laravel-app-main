@@ -1,6 +1,8 @@
-@extends('layout.HomeLayout')
+@extends('layouts.HomeLayout')
 @section('content')
-
+<?php 
+// echo phpinfo(); 
+?>
     {{--
 <link rel="stylesheet" href="/css/homebody.css"> --}}
 

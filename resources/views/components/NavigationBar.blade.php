@@ -2,87 +2,87 @@
  $link_list = [
 
 [
-    "href"=> "/" . config("app.admin_path"),
+    "href"=> config("app.admin_path"),
     "className"=> "",
     "textLink"=> "Dashboard"
 ],
 [
-    "href" =>"/" . config("app.admin_path") . "/article",
+    "href" =>config("app.admin_path") . "/article",
     "className"=> "",
     "textLink"=> "Articles",
     "child"=> [
         [
-            "href"=> "/" . config("app.admin_path") . "/article/add",
+            "href"=> config("app.admin_path") . "/article/add",
             "className"=> "",
             "textLink"=> "New Articles",
         ]
     ]
     ],
 [
-    "href"=> "/" . config("app.admin_path") . "/question",
+    "href"=> config("app.admin_path") . "/question",
     "className"=> "",
     "textLink"=> "Question",
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/order",
+    "href"=> config("app.admin_path") . "/order",
     "className"=> "",
     "textLink"=> "Order",
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/comment",
+    "href"=> config("app.admin_path") . "/comment",
     "className"=> "",
     "textLink"=> "Comment",
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/category",
+    "href"=> config("app.admin_path") . "/category",
     "className"=> "",
     "textLink"=> "Category",
     "child"=> [
         [
-            "href"=> "/" . config("app.admin_path") . "/category/add",
+            "href"=> config("app.admin_path") . "/category/add",
             "className"=> "",
             "textLink"=> "   New Category",
         ]
     ]
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/user",
+    "href"=> config("app.admin_path") . "/user",
     "className"=> "",
     "textLink"=> "User",
     "child"=> [
         [
-            "href"=> "/" . config("app.admin_path") . "/user/add",
+            "href"=> config("app.admin_path") . "/user/add",
             "className"=> "",
             "textLink"=> "   New User",
         ]
     ]
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/media",
+    "href"=> config("app.admin_path") . "/media",
     "className"=> "",
     'textLink'=> "Media",
     "child"=> [
         [
-            "href"=> "/" . config("app.admin_path") . "/media/add",
+            "href"=> config("app.admin_path") . "/media/add",
             "className"=> "",
             "textLink"=> "   New Media",
         ]
     ]
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/tag",
+    "href"=> config("app.admin_path") . "/tag",
     'className'=> "",
     "textLink"=> "Tags",
     "child"=> [
         [
-            "href"=> "/" . config("app.admin_path") . "/tag/add",
+            "href"=> config("app.admin_path") . "/tag/add",
             "className"=> "",
             "textLink"=> "   New Tag",
         ]
     ]
 ],
 [
-    "href"=> "/" . config("app.admin_path") . "/siteinfo",
+    "href"=> config("app.admin_path") . "/siteinfo",
     "className"=> "",
     "textLink"=> "Site Info"
 ],
@@ -90,8 +90,8 @@
 
 ]
 ?>
-<div class="col-span-3">
-    <ul class="navigationBar">
+
+    <ul class="navigationBar top-1 sticky">
         <li style="margin-bottom=> 22px">
             <a href="/">
                 Back to Home
@@ -99,14 +99,16 @@
         </li>
         @foreach ($link_list as $link)
         <li>
-            <a href={{$link["href"]}}>
+            <a href={{"/".$link["href"]}} class={{ (Request::is($link["href"])) ? 'active' : '' }}>
                 {{$link["textLink"]}}
+                
                 @if (isset($link["child"]))
                 <ul>
                     @foreach ($link["child"] as $child)
                     <li>
-                        <a href= {{$child["href"]}}>
+                        <a href= {{"/".$child["href"]}} class={{ (Request::is($child["href"])) ? 'active' : '' }}>
                             {{$child["textLink"]}}
+                            
                         </a>
                     </li>
                     @endforeach
@@ -190,4 +192,3 @@
             </a>
         </li> --}}
     </ul>
-</div>

@@ -1,5 +1,5 @@
-<div class="footer">
-    <div class=" grid grid-cols-12 gap-4 mx-44">
+<div>
+    <div class="footer p-10 bg-neutral text-neutral-content">
         <div class="col-span-4 address">
             <div>
                 <p class="strong">trụ sở hà nội</p>
@@ -45,7 +45,6 @@
             </div>
             <div>
                 <p>
-
                     <a rel="nofollow" target="_blank" href="https://kenh14.vn/static/chinh-sach-bao-mat.htm">
                         Chính sách bảo mật</a>
                 </p>

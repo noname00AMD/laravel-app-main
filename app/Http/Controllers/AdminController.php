@@ -4,15 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Models\SiteInfo;
 use Illuminate\View\View;
-use Illuminate\Routing\Controller as BaseController;
-use App\Livewire;
 
-class AdminController extends BaseController
+class AdminController extends Controller
 {
     /**
      * Show the profile for a given user.
      */
-    public function  show_dashboard()
+    public function  show_dashboard():View
     {
         return view('admin.Dashboard', [
             'title' => "AdminDashboard",
@@ -20,7 +18,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  show_article()
+    public function  show_article():View
     {
         return view('admin.Article', [
             'title' => "Adminartivle",
@@ -29,7 +27,7 @@ class AdminController extends BaseController
             "article" => []
         ]);
     }
-    public function  add_article()
+    public function  add_article():View
     {
         return view('admin.AddArticle', [
             'title' => "Adminartivle",
@@ -37,7 +35,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  show_question()
+    public function  show_question():View
     {
         return view('admin.Question', [
             'title' => "Adminartivle",
@@ -46,7 +44,7 @@ class AdminController extends BaseController
             "questions" => []
         ]);
     }
-    public function  show_category()
+    public function  show_category():View
     {
         return view('admin.Category', [
             'title' => "Adminartivle",
@@ -54,7 +52,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  add_category()
+    public function  add_category():View
     {
         return view('admin.AddCategory', [
             'title' => "Adminartivle",
@@ -62,7 +60,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  show_user()
+    public function  show_user():View
     {
         return view('admin.User', [
             'title' => "Adminartivle",
@@ -71,7 +69,7 @@ class AdminController extends BaseController
             "users" => []
         ]);
     }
-    public function  add_user()
+    public function  add_user():View
     {
         return view('admin.AddUser', [
             'title' => "Adminartivle",
@@ -79,7 +77,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  show_media()
+    public function  show_media():View
     {
         return view('admin.Media', [
             'title' => "Adminartivle",
@@ -89,7 +87,7 @@ class AdminController extends BaseController
 
         ]);
     }
-    public function  add_media()
+    public function  add_media():View
     {
         return view('admin.AddMedia', [
             'title' => "Adminartivle",
@@ -97,7 +95,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  show_tag()
+    public function  show_tag():View
     {
         return view('admin.Tag', [
             'title' => "Adminartivle",
@@ -106,7 +104,7 @@ class AdminController extends BaseController
             "tags" => []
         ]);
     }
-    public function  add_tag()
+    public function  add_tag():View
     {
         return view('admin.AddTag', [
             'title' => "Adminartivle",
@@ -114,7 +112,7 @@ class AdminController extends BaseController
             "adminpath" => "admin"
         ]);
     }
-    public function  site_info()
+    public function  site_info():View
     {
         return view('admin.SiteInfo', [
             'title' => "Adminartivle",

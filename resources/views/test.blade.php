@@ -1,4 +1,4 @@
-@extends('layout.HomeLayout')
+@extends('layouts.HomeLayout')
 @section('content')
 
 <form hx-post="/name" hx-target="#names" hx-swap="beforeend">

@@ -1,8 +1,6 @@
-<div class="col-span-9 col-start-4 newarticle">
-
-    {{-- @vite('resources/sass/NewArticle.sass') --}}
-
-    <form action="submit" onsubmit={submit}>
+<div class="grid grid-cols-12 gap-4  newarticle">
+<div class="col-span-10 pb-10">
+    <form action="submit" >
         <label class="form-control w-full max-w">
             <div class="label">
                 <span aria-required="true" class="label-text">Title</span>
@@ -29,7 +27,7 @@
         </label>
         <label for="">
             <span>Content</span>
-            <textarea name="content" class="p-2 block w-full rounded-2xl min-h-36" id="" cols="30" rows="10"></textarea>
+            <textarea name="content" placeholder="Content ..." class="p-2 block w-full rounded-2xl min-h-36" id="" cols="30" rows="10"></textarea>
         </label>
         <div>
             <input type="checkbox" name="use_tts" class={use_tts} />
@@ -42,88 +40,17 @@
             type="thumb"
             >
         </ImgInput> --}}
-        <label class="block" for="thumbtype">
-            <span>
-                Thumb type :
-            </span>
-            <select required name="thumbType" class="thumbType">
-                {{-- {
+   
 
-            props.siteInfo.thumbTypes.map((item, index) => {
-            return (
-            <option value={item} key={index}>
-                {item}
-            </option>
-            )
-            })} --}}
-{{-- @foreach(){
-
-} --}}
-            </select>
-        </label>
-
-        <label style=" display:  block" for="lang"> 
-            <span>
-                Lang :
-            </span>
-            <select required  name="lang" class="lang">
-        </label>
-            {{-- {
-            props.siteInfo.langSupport.map((lang, index) => {
-            return (
-
-            <option key={index} value={lang}>
-                {lang}
-            </option>
-
-            )
-            })
-            } --}}
-        </select>
-        <label for="category" style=" margin:  5px; display: block" name="category">
-            <label for="">                Category:             </label>
-            <select ref={categoryRef} class="category" aria-placeholder="select category" required>
-        </label>
-            {{-- {props.categories.map((category, index) => {
-            if (category.type == "category") {
-            var sub = props.categories.filter(cate => {
-            return ((cate.parent === category.id) && (cate.type === "subcategory"))
-            })
-            if (sub.length > 0) {
-            return (<Fragment key={index}>
-                <option style=" fontWeight: " bold" value={category.id}>
-                    {category.cate_name}
-                </option>
-                <optgroup label={">> " + category.cate_name}>
-                    {sub.map((subcate, index1) => {
-                    return (
-                    <option key={subcate.id} value={subcate.id}>
-                        {subcate.cate_name}
-                    </option>
-                    )
-                    })
-                    }
-                </optgroup>
-            </Fragment>)
-            } else {
-            return (
-            <option key={index} style=" fontWeight: " bold" value={category.id}>
-                {category.cate_name}
-            </option>
-            )
-            }
-            }
-            })
-            } --}}
-
-        </select>
+   
+      
         <label style=" display: block; margin: 5px" for="tags">
             <span>
                 Add tag:
             </span>
-            <input style=" border:  1px solid black; padding: 5px; margin: 5px" placeholder="Enter a tag"          />
+            <input style=" border:  1px solid black; padding: 5px; margin: 5px" placeholder="Fill in a tag ..."          />
         </label>
-        <input type="button" onClick={onAddBtn} value="Add tag" class={add_tag_button} />
+        <input type="button"  value="Add tag" class="input input-bordered" />
         <div class="tagInput">
             <span>Tags :</span>
             {{-- {tags.map((tag, ind) =>
@@ -136,21 +63,100 @@
         </div>
         <div class="tag_box" style=" font-size:  1.8rem">
         </div>
-        <label style=" margin:  5px" for="status">
-        <span>            Status:            </span>    
-            <select onchange={changeStatus} name="status" class={status}>
-                <option value="public">Public</option>
-                <option value="hidden">Hidden</option>
-                <option value="schedule">schedule</option>
-            </select>
-         </label>
-        <input style=" display:  block;padding: 5px; fontSize: 25px" ref={timeRef} disabled type="time"
-            name="time" class={time} />
-        <input style=" display:  block; padding: 5px; fontSize: 25px" ref={dateRef} disabled type="date"
-            name="date" class={date} />
-        <button class="btn done btn-outline" type="submit"><strong>Post</strong></button>
     </form>
-
+</div>
+<div class="col-span-2 col-start-11 ">
+    <div class="top-1 sticky">
+        <label style=" margin:  5px" for="status">
+            <span>            Status:            </span>    
+                <select onchange={changeStatus} name="status" class={status}>
+                    <option value="public">Public</option>
+                    <option value="hidden">Hidden</option>
+                    <option value="schedule">schedule</option>
+                </select>
+             </label>
+             <input style=" display:  block;padding: 5px; fontSize: 25px" ref={timeRef} disabled type="time"
+             name="time" class={time} />
+         <input style=" display:  block; padding: 5px; fontSize: 25px" ref={dateRef} disabled type="date"
+             name="date" class={date} />
+             <label style=" display:  block" for="lang"> 
+                <span>
+                    Lang :
+                </span>
+                <select required  name="lang" class="lang">
+                    {{-- {
+                    props.siteInfo.langSupport.map((lang, index) => {
+                    return (
+        
+                    <option key={index} value={lang}>
+                        {lang}
+                    </option>
+        
+                    )
+                    })
+                    } --}}
+                </select>
+            </label>
+            <label class="block" for="thumbtype">
+                <span>
+                    Thumb type :
+                </span>
+                <select required name="thumbType" class="thumbType">
+                    {{-- {
+    
+                props.siteInfo.thumbTypes.map((item, index) => {
+                return (
+                <option value={item} key={index}>
+                    {item}
+                </option>
+                )
+                })} --}}
+    {{-- @foreach(){
+    
+    } --}}
+                </select>
+            </label>
+            <label for="category" style=" margin:  5px; display: block" name="category">
+                <label for="">                Category:             </label>
+                <select ref={categoryRef} class="category" aria-placeholder="select category" required>
+                {{-- {props.categories.map((category, index) => {
+                if (category.type == "category") {
+                var sub = props.categories.filter(cate => {
+                return ((cate.parent === category.id) && (cate.type === "subcategory"))
+                })
+                if (sub.length > 0) {
+                return (<Fragment key={index}>
+                    <option style=" fontWeight: " bold" value={category.id}>
+                        {category.cate_name}
+                    </option>
+                    <optgroup label={">> " + category.cate_name}>
+                        {sub.map((subcate, index1) => {
+                        return (
+                        <option key={subcate.id} value={subcate.id}>
+                            {subcate.cate_name}
+                        </option>
+                        )
+                        })
+                        }
+                    </optgroup>
+                </Fragment>)
+                } else {
+                return (
+                <option key={index} style=" fontWeight: " bold" value={category.id}>
+                    {category.cate_name}
+                </option>
+                )
+                }
+                }
+                })
+                } --}}
+    
+            </select>
+        </label>
+        <button class="btn done btn-outline mt-2" type="submit"><strong>Post</strong></button>
+        
+    </div>
+</div>
 </div>
 {{-- <script>
     function textToTag(tag) {

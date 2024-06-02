@@ -25,11 +25,16 @@
 
 <body>
     <div class="grid grid-cols-12 gap-4  lg:px-44">
-        <x-NavigationBar />
+        <div class="col-span-2">
+            <x-NavigationBar />
+        </div>
        {{-- @section('content')
            loading
        @show --}}
-       {{$slot}}
+       <div class="col-span-10 col-start-3 ">
+           {{$slot}}
+       </div>
+    
     </div>
 </body>
 

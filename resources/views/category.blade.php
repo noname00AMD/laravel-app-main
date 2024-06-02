@@ -1,4 +1,4 @@
-@extends('layout.HomeLayout')
+@extends('layouts.HomeLayout')
 @section('content')
     {{--
 <link rel="stylesheet" href="/css/homebody.css"> --}}

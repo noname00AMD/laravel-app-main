@@ -2,21 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers;
-use Illuminate\Http\Request;
-use Illuminate\View;
 use App\Http\Middleware;
 use App\Livewire;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Route::middleware([])->get('/', [Controllers\PageController::class, "home"]);
 Route::get('/about', [Controllers\PageController::class, "about"]);
@@ -39,7 +26,10 @@ Route::post('/name', [Controllers\PageController::class, "name"]);
 
 Route::get('/counter', Livewire\Counter::class);
 
+// Route::post('setToken', [Controllers\FirebasePushController::class, 'setToken']);
 
+// Route::post('/push-subscribe', WebPush::class.'@subscribe');
+// Route::delete('/push-unsubscribe', WebPush::class.'@unsubscribe');
 // HTMX  ----------------------------------------------------------------
 
 
