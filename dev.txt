@@ -1,0 +1,4 @@
+
+header cache (etag)
+respone cache
+respone zip(compress)

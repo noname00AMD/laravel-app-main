@@ -16,15 +16,6 @@ class PageController extends Controller
      */
     public function  home(Request $request,Response $response):View
     {
-        // Log::info('Hi there!');
-        // $data = "home";
-        // $etag = md5(json_encode($data));
-
-        // // Check if the client's ETag matches the current ETag
-        // if ($request->header('If-None-Match') === $etag) {
-        //     // Return 304 Not Modified response
-        //     return $response(null, 304);
-        // }
 
         
         // $object="A";

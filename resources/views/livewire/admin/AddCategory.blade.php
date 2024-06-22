@@ -4,21 +4,21 @@
         <form class="mt-2" action="submit">
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">Category:</span>
+                    <span aria-required="true" class="label-text">Category:<span class="text-red-600"> *</span></span>
                 </div>
                 <input required type="text" placeholder="Category ..." class="input input-bordered w-full max-w"
                     max-length="120" wire:model="category" wire:keyup='text_to_slug' min-length="16" />
             </label>
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">Slug</span>
+                    <span aria-required="true" class="label-text">Slug:<span class="text-red-600"> *</span></span>
                 </div>
                 <input required type="text" placeholder="Slug ..." class="input input-bordered w-full max-w"
                     max-length="120" wire:model="slug" min-length="16" />
             </label>
 
             <label for="description">
-                <span aria-required="true"> Description: </span>
+                <span aria-required="true"> Description:<span class="text-red-600"> *</span> </span>
                 <textarea required id="description" class="p-2 block w-full rounded-2xl min-h-36" placeholder="Description ..."
                     max-length="500" min-length="16"></textarea>
             </label>

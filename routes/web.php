@@ -5,7 +5,7 @@ use App\Http\Controllers;
 use App\Http\Middleware;
 use App\Livewire;
 
-Route::middleware([])->get('/', [Controllers\PageController::class, "home"]);
+Route::get('/', [Controllers\PageController::class, "home"])->middleware("cache.headers:public;max_age=2628000;etag");
 Route::get('/about', [Controllers\PageController::class, "about"]);
 Route::get('/contact', [Controllers\PageController::class, "about"]);
 

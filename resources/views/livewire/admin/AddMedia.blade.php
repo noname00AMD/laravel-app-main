@@ -4,7 +4,7 @@
         <form class="mt-2" action="submit">
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">Media:</span>
+                    <span aria-required="true" class="label-text">Media:<span class="text-red-600"> *</span></span>
                 </div>
                 
                    {{-- *** <ImgInput

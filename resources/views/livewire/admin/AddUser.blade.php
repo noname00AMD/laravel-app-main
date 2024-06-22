@@ -4,14 +4,14 @@
         <form class="mt-2" action="submit">
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">Email:</span>
+                    <span aria-required="true" class="label-text">Email:<span class="text-red-600"> *</span></span>
                 </div>
                 <input required type="text" placeholder="Category ..." class="input input-bordered w-full max-w"
                     max-length="120" wire:model="category" wire:keyup='text_to_slug' min-length="16" />
             </label>
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">User name</span>
+                    <span aria-required="true" class="label-text">User name:<span class="text-red-600"> *</span></span>
                 </div>
                 <input required type="text" placeholder="user name ..." class="input input-bordered w-full max-w"
                     max-length="120" wire:model="slug" min-length="16" />
@@ -20,7 +20,7 @@
        
             <label class="form-control w-full max-w">
                 <div class="label">
-                    <span aria-required="true" class="label-text">Password</span>
+                    <span aria-required="true" class="label-text">Password<span class="text-red-600"> *</span></span>
                 </div>
                 <input required type="password" placeholder="password ..." class="input input-bordered w-full max-w"
                     max-length="120" wire:model="slug" min-length="16" />
